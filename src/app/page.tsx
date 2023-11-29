@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { IoMdCloseCircle } from "react-icons/io";
 
 const Page = () => {
     return (
@@ -9,7 +10,7 @@ const Page = () => {
                 aria-label="menu"
                 className="flex-none w-full md:w-2/3 xl:w-3/4 px-[55px] py-[30px]"
             >
-                <h1 className="col-span-4 text-2xl mb-[40px]">Menu</h1>
+                <h1 className="text-2xl mb-[40px]">Menu</h1>
 
                 <section
                     aria-label="food-items"
@@ -160,10 +161,52 @@ const Page = () => {
             >
                 <div className="h-full w-full flex flex-col gap-2">
                     <section
-                        aria-label="cart-items"
+                        aria-label="cart-details"
                         className="bg-white grow rounded-lg px-[25px] py-[35px]"
                     >
-                        <h1 className="text-2xl">Cart</h1>
+                        <div className="h-full flex flex-col justify-between">
+                            <section
+                                aria-label="cart-order"
+                                className="space-y-2"
+                            >
+                                <h1 className="text-2xl mb-[40px]">Cart</h1>
+
+                                <h2 className="font-semibold">Order(s)</h2>
+
+                                <section
+                                    aria-label="order-items"
+                                    className="h-[500px] overflow-auto"
+                                >
+                                    <table className="w-full">
+                                        <tr>
+                                            <td>Chicken Alfredo</td>
+                                            <td>15.99$</td>
+                                            <td className="text-[22px]">
+                                                <IoMdCloseCircle />
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Grilled Salmon</td>
+                                            <td>18.99$</td>
+                                            <td className="text-[22px]">
+                                                <IoMdCloseCircle />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </section>
+                            </section>
+
+                            <section
+                                aria-label="total-price"
+                                className="flex justify-between"
+                            >
+                                <span className="font-semibold">Total</span>
+                                <span className="text-2xl font-semibold">
+                                    34.98$
+                                </span>
+                            </section>
+                        </div>
                     </section>
 
                     <section aria-label="cart-action" className="space-y-2">
