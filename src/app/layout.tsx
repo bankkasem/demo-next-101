@@ -26,7 +26,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <aside className="fixed hidden md:flex flex-col justify-between items-center h-screen w-[60px] bg-[#4e565e] text-[#babdc2] text-[40px] p-2">
+                <aside className="fixed flex flex-col justify-between items-center h-screen w-[60px] bg-[#4e565e] text-[#babdc2] text-[40px] p-2">
                     <section aria-label="aside-1">
                         <MdMenu />
                     </section>
@@ -49,7 +49,7 @@ export default function RootLayout({
                     </section>
                 </aside>
 
-                <main className="bg-[#f6f7fb] md:pl-[60px] h-screen w-full overflow-auto">
+                <main className="bg-[#f6f7fb] pl-[60px] h-screen w-full overflow-auto">
                     {children}
                 </main>
             </body>
