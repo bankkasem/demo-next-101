@@ -49,7 +49,7 @@ export default function RootLayout({
                     </section>
                 </aside>
 
-                <main className="md:ml-[60px] h-screen bg-[#f6f7fb] overflow-auto">
+                <main className="bg-[#f6f7fb] md:pl-[60px] h-screen w-full overflow-auto">
                     {children}
                 </main>
             </body>
