@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Chicken Alfredo",
+    "price": 15.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Grilled Salmon",
+    "price": 18.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Vegetarian Pasta",
+    "price": 12.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Beef Lasagna",
+    "price": 16.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Shrimp Scampi",
+    "price": 17.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Margherita Pizza",
+    "price": 14.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "BBQ Ribs",
+    "price": 19.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Tofu Stir-Fry",
+    "price": 13.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Chicken Parmesan",
+    "price": 16.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Lobster Linguine",
+    "price": 22.99,
+    "image": "https://placehold.co/150x150"
+  },
+  {
+    "name": "Pesto Chicken Penne",
+    "price": 14.99,
+    "image": "https://placehold.co/150x150"
+  }
+]
