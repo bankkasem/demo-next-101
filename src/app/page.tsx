@@ -1,8 +1,21 @@
+"use client";
+
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import { useSearchParams } from "next/navigation";
+import React, { useEffect, useMemo, useState } from "react";
 import { IoMdCloseCircle } from "react-icons/io";
 
 const Page = () => {
+    const searchParams = useSearchParams();
+
+    const foodName = searchParams.get("foodName");
+
+    const [search, setSearch] = useState<string | null>(null);
+
+    useEffect(() => {
+        setSearch(foodName);
+    }, [foodName]);
+
     return (
         <div className="h-full w-full flex p-4 text-[#555d65]">
             {/* MENU */}
@@ -10,7 +23,55 @@ const Page = () => {
                 aria-label="menu"
                 className="flex-none w-full md:w-2/3 xl:w-3/4 px-[55px] py-[30px]"
             >
-                <h1 className="text-2xl mb-[40px]">Menu</h1>
+                <section className="flex flex-row space-x-2">
+                    <h1 className="text-2xl mb-[40px]">Menu</h1>
+
+                    <label className="relative block">
+                        <span className="sr-only">Search</span>
+                        <input
+                            value={search ?? ""}
+                            className="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                            placeholder="Search for food items"
+                            type="text"
+                            name="search"
+                            onChange={(e) => {
+                                setSearch(e.target.value);
+                            }}
+                        />
+                    </label>
+
+                    <button
+                        type="button"
+                        className="text-white bg-[#01bfff] mb-[40px] hover:bg-[#03a5dc] font-medium rounded-lg text-sm px-5 py-2.5"
+                        onClick={() => {
+                            if (search) {
+                                const urlParams = new URLSearchParams();
+
+                                urlParams.append("foodName", search);
+
+                                window.location.search = urlParams.toString();
+                            }
+                        }}
+                    >
+                        Search
+                    </button>
+
+                    <button
+                        type="button"
+                        className="text-white bg-red-500 mb-[40px] hover:bg-red-700 font-medium rounded-lg text-sm px-5 py-2.5"
+                        onClick={() => {
+                            if (foodName) {
+                                const urlParams = new URLSearchParams();
+
+                                urlParams.delete("foo");
+
+                                window.location.search = urlParams.toString();
+                            }
+                        }}
+                    >
+                        Clear
+                    </button>
+                </section>
 
                 <section
                     aria-label="food-items"
@@ -178,21 +239,23 @@ const Page = () => {
                                     className="h-[500px] overflow-auto"
                                 >
                                     <table className="w-full">
-                                        <tr>
-                                            <td>Chicken Alfredo</td>
-                                            <td>15.99$</td>
-                                            <td className="text-[22px]">
-                                                <IoMdCloseCircle />
-                                            </td>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>Chicken Alfredo</td>
+                                                <td>15.99$</td>
+                                                <td className="text-[22px]">
+                                                    <IoMdCloseCircle />
+                                                </td>
+                                            </tr>
 
-                                        <tr>
-                                            <td>Grilled Salmon</td>
-                                            <td>18.99$</td>
-                                            <td className="text-[22px]">
-                                                <IoMdCloseCircle />
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td>Grilled Salmon</td>
+                                                <td>18.99$</td>
+                                                <td className="text-[22px]">
+                                                    <IoMdCloseCircle />
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </section>
                             </section>
