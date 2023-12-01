@@ -178,21 +178,22 @@ const Page = () => {
                                     className="h-[500px] overflow-auto"
                                 >
                                     <table className="w-full">
-                                        <tr>
-                                            <td>Chicken Alfredo</td>
-                                            <td>15.99$</td>
-                                            <td className="text-[22px]">
-                                                <IoMdCloseCircle />
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>Grilled Salmon</td>
-                                            <td>18.99$</td>
-                                            <td className="text-[22px]">
-                                                <IoMdCloseCircle />
-                                            </td>
-                                        </tr>
+                                        <tbody>
+                                            <tr>
+                                                <td>Chicken Alfredo</td>
+                                                <td>15.99$</td>
+                                                <td className="text-[22px]">
+                                                    <IoMdCloseCircle />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grilled Salmon</td>
+                                                <td>18.99$</td>
+                                                <td className="text-[22px]">
+                                                    <IoMdCloseCircle />
+                                                </td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </section>
                             </section>
